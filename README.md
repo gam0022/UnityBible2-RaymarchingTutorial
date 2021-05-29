@@ -2,6 +2,8 @@
 
 [『Unityゲーム プログラミング・バイブル 2nd Generation』](https://amzn.to/3oe2agf)の「レイマーチング：基礎から応用まで」向けのサンプルプロジェクトです。
 
+![レイマーチング：基礎から応用まで](Images/Collage_Fotor.png)
+
 [RaymarchingTutorial/Assets/RaymarchingTutorial](RaymarchingTutorial/Assets/RaymarchingTutorial)に13個のサンプルシーンがあります。
 
 ## バージョン情報
