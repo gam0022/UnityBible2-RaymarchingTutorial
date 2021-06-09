@@ -1,6 +1,6 @@
 # レイマーチング：基礎から応用まで
 
-[『Unityゲーム プログラミング・バイブル 2nd Generation』](https://amzn.to/3oe2agf)の「レイマーチング：基礎から応用まで」向けのサンプルプロジェクトです。
+[『Unityゲーム プログラミング・バイブル 2nd Generation』](https://amzn.to/3oe2agf)の「No.07 レイマーチング：基礎から応用まで」向けのサンプルプロジェクトです。
 
 ![レイマーチング：基礎から応用まで](Images/Collage_Fotor.png)
 
