@@ -131,7 +131,7 @@
                 if (hit)
                 {
                     float3 normal = calcNormal(p);// 法線
-                    float3 light = normalize(float3(-1, 1, -1));// 平行光源の方向ベクトル
+                    float3 light = normalize(float3(1, 1, -1));// 平行光源の方向ベクトル
                     col = saturate(dot(normal, light));// 内積でライティング（ランバート反射）
                 }
                 else
