@@ -165,8 +165,8 @@
                 
                 // UVに対応するレイを計算
                 float3 forward = normalize(cameraTarget - cameraOrigin);
-                float3 right = normalize(cross(forward, cameraUp));
-                float3 up = normalize(cross(right, forward));
+                float3 right = normalize(cross(cameraUp, forward));
+                float3 up = normalize(cross(forward, right));
                 
                 float PI = 3.14159265359;
                 float3 ray = normalize(
@@ -200,7 +200,7 @@
                 {
                     // ライティングのパラメーター
                     float3 normal = calcNormal(p);// 法線
-                    float3 light = normalize(float3(-1, 1, -1));// 平行光源の方向ベクトル
+                    float3 light = normalize(float3(1, 1, -1));// 平行光源の方向ベクトル
                     
                     // マテリアルのパラメーター
                     float3 albedo = float3(1, 1, 1);// アルベド
