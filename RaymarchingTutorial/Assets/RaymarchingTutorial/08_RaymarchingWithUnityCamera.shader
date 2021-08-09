@@ -154,13 +154,19 @@
                 
                 // UVを -1～1 の範囲に変換します
                 float2 uv = 2.0 * input.uv - 1.0;
+
+                float fov = 60;
+                float degree2rad = UNITY_PI/180.0f;
+                float tangent = tan(fov*degree2rad*0.5);
+                float3 viewRay = float3(uv*tangent, -1);
+                viewRay = normalize(viewRay);
                 
                 // カメラの位置
                 float3 cameraOrigin = _WorldSpaceCameraPos;
                 
                 // カメラ行列からレイを生成します
-                float4 clipRay = float4(uv, 1, 1);// クリップ空間のレイ
-                float3 viewRay = normalize(mul(unity_CameraInvProjection, clipRay).xyz);// ビュー空間のレイ
+                //float4 clipRay = float4(uv, 1, 1);// クリップ空間のレイ
+                //float3 viewRay = normalize(mul(unity_CameraInvProjection, clipRay).xyz);// ビュー空間のレイ
                 float3 ray = mul(transpose((float3x3)UNITY_MATRIX_V), viewRay);// ワールド空間のレイ
                 
                 // レイマーチング
